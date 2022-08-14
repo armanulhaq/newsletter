@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 70px;
+    background-color: #31087B;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+#company-name {
+    padding-left: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-size: 180%;
+}
+
+#main-box {
+    background-color: #31087B;
+    height: 600px;
+    margin-left: 50px;
+    width: 60vw;
+    border-radius: 7px;
+}
+
+#promotion {
+    color: white;
+    height: 30vh;
+    margin-top: 80px;
+}
+
+#promotion1 {
+    font-size: 180%;
+    font-weight: 900;
+    padding-bottom: 30px;
+}
+
+#promotion2 {
+    font-size: 180%;
+}
+
+#signup {
+    width: 80%;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#input {
+    height: 40px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+    width: 80%;
+
+}
+
+#get-started {
+    width: 180px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#success {
+    background-color: #31087B;
+    color: white;
+    height: 130px;
+    width: 40vw;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7px;
+}
