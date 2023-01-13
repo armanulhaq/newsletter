@@ -4,7 +4,7 @@ const express = require('express');
 //body parser helps you with accessing post request easily, for example req.body.email
 const bodyParser = require('body-parser');
 
-// It is the simplest way of making HTTP calls in node. js using this request module. 
+// It is the simplest way of making HTTP calls in node.js using this request module. 
 const request  = require('request');
 
 const https = require("https")
@@ -27,7 +27,6 @@ app.post('/', function(req, res) {
     const f_name = req.body.f_name;
     const l_name = req.body.l_name;
     const email = req.body.email;
-    
     //Creating data as recommended by Mailchimp
     const data = {
         members:  [  
@@ -44,12 +43,13 @@ app.post('/', function(req, res) {
     //converting it into JSON
     const jsonData = JSON.stringify(data);
 
-    const url= "https://us12.api.mailchimp.com/3.0/lists/da0e6c8e75"
+    const url= "https://us21.api.mailchimp.com/3.0/lists/c03d645edf"
     
     const options = {
         method: "POST",
-        auth: "arman:085dafc30ebb5633f1dba4d0c78123d9-us12"
+        auth: "arman:c36cf47dd88d5a925ee66040e10f71b6-us21"
     }
+    // making request to the mailchimp server by using the url and sending the options alongwith it
 
     const request = https.request(url, options, function(response) {
         
@@ -58,7 +58,7 @@ app.post('/', function(req, res) {
         } else {
             res.sendFile(__dirname + "/failed.html");
         }
-        
+        //logs the data we got
         response.on("data", function(data) {
             console.log(JSON.parse(data));
         })
@@ -68,7 +68,7 @@ app.post('/', function(req, res) {
     request.end();
 });
 
-
+// asking to listen to whatever port Mailchimp wants
 app.listen(process.env.PORT || 3000,function() {
     console.log('Server 3000 started.');
 })
